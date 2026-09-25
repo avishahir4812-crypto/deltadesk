@@ -81,8 +81,8 @@ export default function OverviewPage() {
         <span className="hidden h-3 w-px bg-line2 sm:block" />
         <span>Refresh 12s</span>
         <span className="ml-auto flex items-center gap-2">
-          <Chip tone="brand" className="tip tip-b cursor-help" data-tip="NIFTY Put-Call Ratio by open interest">PCR {ov.data?.niftyPcr ?? "—"}</Chip>
-          <Chip tone="flat" className="tip tip-b cursor-help" data-tip="NIFTY Max Pain for the current weekly expiry">MP {ov.data ? fmtIN(ov.data.niftyMaxPain, 0) : "—"}</Chip>
+          <Chip tone="brand" className="tip cursor-help" data-tip="NIFTY Put-Call Ratio by open interest">PCR {ov.data?.niftyPcr ?? "—"}</Chip>
+          <Chip tone="flat" className="tip cursor-help" data-tip="NIFTY Max Pain for the current weekly expiry">MP {ov.data ? fmtIN(ov.data.niftyMaxPain, 0) : "—"}</Chip>
           <Chip tone={ov.data && ov.data.vix.chg <= 0 ? "up" : "warn"}>VIX {ov.data?.vix.value ?? "—"}</Chip>
         </span>
       </div>
